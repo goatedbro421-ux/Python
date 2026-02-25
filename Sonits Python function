@@ -1,0 +1,39 @@
+def add(a,b):
+  reusult = a + b
+
+def loop():
+    x = 0
+    y = 1
+    while x < y:
+
+        a = input("Enter 1st number: ")
+        b = input("Enter 2nd number: ")
+        #    if a and b >=
+
+        result = add(a, b)
+        print("The answer is", result)
+        c = input("Do you want to do more addition (Yes or No)? ")
+        print(c)
+        if c == "Yes":
+            continue
+        else:
+            print("Thank you for trying this code!")
+            break
+def loop():
+    x = 0
+    y = 1
+    while x < y:
+
+        a = input("Enter 1st number: ")
+        b = input("Enter 2nd number: ")
+        #    if a and b >=
+
+        result = add(a, b)
+        print("The answer is", result)
+        c = input("Do you want to do more addition (Yes or No)? ")
+        print(c)
+        if c == "Yes":
+            continue
+        else:
+            print("Thank you for trying this code!")
+            break
