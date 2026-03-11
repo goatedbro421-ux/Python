@@ -1,0 +1,26 @@
+#Number guess game function (guesswork(a,b))
+
+def guesswork(a, b):
+    import random
+
+    x = 0
+    y = 1
+    d = str(a)
+    c = str(b)
+    result = random.randint(a, b)
+    while x < y:
+        result1 = int(input(f"Guess the number I chose from {d} to {c}. "))
+        if result1 == result:
+            return "You got it right!"
+        elif result1 > result:
+            print("Too high.")
+            print(f"That real number was {str(result)}.")
+        elif result1 < result:
+            print("Too low.")
+            print(f"That real number was {str(result)}.")
+        question = input("Do you want to guess some more? ")
+        if question.lower() == "yes":
+            result = random.randint(a, b)
+            continue
+        else:
+            break
