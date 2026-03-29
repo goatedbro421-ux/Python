@@ -1,0 +1,21 @@
+# guessing the number
+
+def numguess(a,b):
+    import random
+    num1 = random.randint(a,b)
+    true = True
+    while true:
+        num2 = input(f"Guess the number between {a} and {b}: ")
+        num3 = int(num2)
+        if num1 == num3:
+            print("Correct!")
+            question = input("Would you like to play again? (y/n) ")
+            if question == "y":
+                continue
+            else:
+                return "Thank you for playing!"
+                
+        elif num1 < num3:
+            print("Too high, try again!")
+        elif num1 > num3:
+            print("Too low, try again!")
