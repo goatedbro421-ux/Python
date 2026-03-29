@@ -1,6 +1,6 @@
 #Number guess game function (guesswork(a,b))
 
-def guesswork(a, b):
+def numguess(a, b):
     import random
 
     x = 0
