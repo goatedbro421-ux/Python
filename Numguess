@@ -1,6 +1,6 @@
 # guessing the number
 
-def numguess(a,b):
+def guesswork(a,b):
     import random
     num1 = random.randint(a,b)
     true = True
