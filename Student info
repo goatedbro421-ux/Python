@@ -1,0 +1,43 @@
+# Student info
+class ID():
+    def __init__(self, first, last, gender, age, teacher, school):
+        self.first = first
+        self.last = last
+        self.gender = gender
+        self.age = age
+        self.teacher = teacher
+        self.school = school
+
+    # Method to print student data
+    def print_id(self):
+        print("\n--- Student ID ---")
+        print("First name: {}".format(self.first))
+        print("Last name: {}".format(self.last))
+        print("Gender: {}".format(self.gender))
+        print("Age: {}".format(self.age))
+        print("Teacher: {}".format(self.teacher))
+        print("School: {}".format(self.school))
+
+
+student = []
+s1 = ID("Redacted", "Redacted", "Redacted", "Redacted", "Redacted", "Redacted") # Order for OOP ID(First name, last name, gender, age, teacher, school)
+s2 = ID("Redacted")
+student.append(s1)
+student.append(s2)
+
+question = input("Do you want to see your student's ID? (y/n) ").strip().lower()
+
+if question == "y":
+    question2 = input("What is your student's name? ").strip().lower()
+
+    found = False
+    # Check all students in the list
+    for std in student:
+        # Compare user input to lowercased student names
+        if question2 == std.first.lower():
+            std.print_id()  # Call the method on the instance
+            found = True
+            break
+
+    if not found:
+        print("That student is not in this school.")
