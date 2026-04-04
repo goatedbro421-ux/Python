@@ -1,0 +1,66 @@
+#Student Info
+class ID():
+    def __init__(self, first, last, gender, age, teacher, school):
+        self.first = first
+        self.last = last
+        self.gender = gender
+        self.age = age
+        self.teacher = teacher
+        self.school = school
+
+        # Define Class
+
+    def print_id(self):
+        print("\n--- Student ID ---")
+        print("First name: {}".format(self.first))
+        print("Last name: {}".format(self.last))
+        print("Gender: {}".format(self.gender))
+        print("Age: {}".format(self.age))
+        print("Teacher: {}".format(self.teacher))
+        print("School: {}".format(self.school))
+
+
+student = []
+s1 = ID("Sonit", "Mohan", 'Male', 11, "Mr.Bennett", "Sunrise Elementary School")
+s2 = ID("Rinit", "Mohan", "Male", 10, "Mrs.Bradley", "Sunrise Elementary School")
+s3 = ID("Sathyavathy", "Mohangandhi", "Female", 12, "Mrs.Sivagami", "Ivanguline Metriculation School")
+s4 = ID("Mohangandhi", "Chinnasamy", "Male", 11, "Mrs.Saraswathi", "Government High School")
+student.append(s1)
+student.append(s2)
+student.append(s3)
+student.append(s4)
+
+question = input("Do you want to see your student's ID? (y/n) ").strip().lower()
+if question == "y":
+    question2 = input("What is your student's name? ").strip().lower()
+    found = False
+
+    # Check all students in the list
+    for std in student:
+        if question2 == std.first.lower():
+            question3 = input(
+                "Which status do you want to know about them? (First name, Last name, gender, age, teacher, school, or all) ").strip().lower()
+
+            #Comparing to lowercase and accessing std directly
+            if question3.lower() == "first name":
+                print(std.first)
+            elif question3.lower() == "last name":
+                print(std.last)
+            elif question3.lower() == "gender":
+                print(std.gender)
+            elif question3.lower() == "age":
+                print(std.age)
+            elif question3.lower() == "teacher":
+                print(std.teacher)
+            elif question3.lower() == "school":
+                print(std.school)
+            elif question3.lower() == "all":
+                std.print_id()
+
+            found = True
+            break
+
+    if not found:
+        print("That student is not in this school.")
+elif question.lower() == "n":
+    print("Okay, computer is shutting down.")
